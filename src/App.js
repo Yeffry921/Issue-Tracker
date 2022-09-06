@@ -1,13 +1,17 @@
-import React from 'react'
+import React from "react";
+import Navbar from "./Navbar/Navbar";
+import "./App.css";
 
 const App = () => {
   return (
-    <div>
+    <main>
       {/* navbar in every page*/}
+      <Navbar />
 
       {/* dashboard */}
-    </div>
-  )
-}
+      <div>Dashboard</div>
+    </main>
+  );
+};
 
-export default App
+export default App;
