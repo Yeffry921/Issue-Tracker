@@ -1,16 +1,14 @@
 import React from "react";
 import Navbar from "./components/Navbar/Navbar";
+import Dashboard from "./components/Dashboard/Dashboard";
 import "./App.css";
 
 const App = () => {
   return (
-    <main>
-      {/* navbar in every page*/}
+    <div>
       <Navbar />
-
-      {/* dashboard */}
-      <div>Dashboard</div>
-    </main>
+      <Dashboard />
+    </div>
   );
 };
 
