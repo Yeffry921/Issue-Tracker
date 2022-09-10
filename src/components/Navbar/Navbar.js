@@ -1,6 +1,6 @@
 import React from "react";
-import logo from "../../img/logo.png";
-import styles from "../Navbar/Navbar.module.css";
+import logo from "../../assets/img/logo.png";
+import styles from "../Navbar/Navbar.module.scss";
 
 const Navbar = () => {
   return (
@@ -13,6 +13,7 @@ const Navbar = () => {
         <li><a href="#">Projects</a></li>
       </ul>
       <div className={styles.avatar}>
+        <span>John Smith</span>
         <img src={logo} className={styles.logo} alt="" />
       </div>
     </header>
