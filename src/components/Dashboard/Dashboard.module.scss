@@ -1,7 +1,6 @@
 .dashboard {
   padding: 1rem;
-  background-color: yellow;
-
+  
   p {
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -11,3 +10,62 @@
     letter-spacing: 0.025em;
   }
 }
+
+.grid-container {
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 10px;
+  display: grid;
+}
+
+.grid-item {
+  padding: 20px 25px;
+  border: 1px solid #DFE0EB;
+  text-align: center;
+  background-color: white;
+  border-radius: 7px;
+
+  h4 {
+    color: #9FA2B4;
+    font-size: .9rem;
+  }
+
+  span {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-item {
+  background-color: white;
+  margin: 2em 0;
+  border-radius: 7px;
+  border: 1px solid #DFE0EB;
+
+  h4 {
+    font-size: 1.2rem;
+    padding: 1em;
+  }
+
+  ul {
+    padding-left: 0;
+    margin: 0;
+  }
+
+  li {
+    list-style: none;
+    border-bottom: 1px solid #DFE0EB;
+    padding: 1em ;
+    font-size: .92rem;
+  }
+
+  li:last-child {
+    border-bottom:none ;
+  }
+}
+
