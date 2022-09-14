@@ -3,7 +3,8 @@ import styles from "../UI/BugTable.module.scss";
 
 const BugTable = () => {
   return (
-    <section className={styles.container}>
+    <div className={styles.container}>
+      <button>Submit Issue</button>
       <table className={styles.table}>
         <thead>
           <tr>
@@ -18,14 +19,14 @@ const BugTable = () => {
 
         <tbody className={styles["table-body"]}>
           <tr>
-            <td>
+            <td className={styles.flex}>
               <input type="checkbox" />
               <a href="#">Project A Form is broken</a>
             </td>
 
             <td>09/21/2022</td>
 
-            <td>
+            <td className={styles.reporter}>
               <span>Antonio Yellow</span>
             </td>
 
@@ -77,7 +78,7 @@ const BugTable = () => {
           </tr>
         </tbody>
       </table>
-    </section>
+    </div>
   );
 };
 
