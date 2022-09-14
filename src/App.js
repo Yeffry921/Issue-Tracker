@@ -5,8 +5,7 @@ import "./App.css";
 import Sidebar from "./components/UI/Sidebar";
 import Projects from "./components/Projects/Projects";
 import { Routes, Route } from "react-router-dom";
-import Issues from "./components/Issues/Issues";
-import BugTable from "./components/UI/BugTable";
+import Issues from './components/Issues/Issues'
 
 const App = () => {
   return (
@@ -17,7 +16,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/projects" element={<Projects />} />
-          <Route path="/issues" element={<BugTable />} />
+          <Route path="/issues" element={<Issues/>} />
         </Routes>
       </main>
     </div>
