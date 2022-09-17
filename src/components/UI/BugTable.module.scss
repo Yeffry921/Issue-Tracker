@@ -45,6 +45,7 @@ button:hover {
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 20px;
+    font-weight: 500;
   }
 }
 
@@ -58,10 +59,14 @@ button:hover {
     font-size: .95rem;
     text-overflow: ellipsis;
     white-space: nowrap;
+    color: #387ED2;
+    font-weight: 500;
   }
+  
   a:hover {
     text-decoration: underline;
   }
+
   tr:hover {
     background-color: rgba($color: #149bfc, $alpha: 0.1);
   }
