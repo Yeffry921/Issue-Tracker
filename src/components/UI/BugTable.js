@@ -37,8 +37,6 @@ const BugTable = () => {
             <td>Major</td>
           </tr>
 
-          {/*  */}
-
           <tr>
             <td>
               <input type="checkbox" />
