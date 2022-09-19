@@ -1,13 +1,13 @@
 import React from "react";
+import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import Dashboard from "./components/Dashboard/Dashboard";
-import "./App.css";
-import { Routes, Route } from "react-router-dom";
 import ProjectList from "./components/UI/ProjectList";
-import Project from "./components/Projects/Project";
+import ProjectDashboard from "./components/Projects/Project";
 import ProjectFeed from "./ProjectFeed";
-import AddIssue from "./components/UI/AddIssue";
+import AddIssue from "./AddIssue";
 import Issue from "./Issue";
+import "./App.css";
 
 const App = () => {
   return (
@@ -17,10 +17,10 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="projectlist" element={<ProjectList />} />
-          <Route path="project" element={<Project />}>
+          <Route path="project" element={<ProjectDashboard />}>
             <Route path="/project/feed/:id" element={<ProjectFeed />} />
-            <Route path="/project/addIssue/:id" element={<AddIssue />} />
-            <Route path="/project/issues/:id" element={<Issue />} />
+            <Route path="/project/addIssue" element={<AddIssue />} />
+            <Route path="/project/issues" element={<Issue />} />
           </Route>
         </Routes>
       </main>
