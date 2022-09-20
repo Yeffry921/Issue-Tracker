@@ -4,7 +4,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Dashboard from "./components/Dashboard/Dashboard";
 import ProjectList from "./components/UI/ProjectList";
 import ProjectDashboard from "./components/Projects/Project";
-import ProjectFeed from "./ProjectFeed";
+import ProjectFeed from "./components/ProjectFeed/ProjectFeed";
 import AddIssue from "./AddIssue";
 import Issue from "./Issue";
 import "./App.css";
