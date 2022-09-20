@@ -6,7 +6,7 @@ import ProjectList from "./components/UI/ProjectList";
 import ProjectDashboard from "./components/ProjectDashboard/ProjectDashboard";
 import ProjectFeed from "./components/ProjectFeed/ProjectFeed";
 import AddIssue from "./AddIssue";
-import Issue from "./Issue";
+import Issues from "./components/Issues/Issues"
 import "./App.css";
 
 const App = () => {
@@ -19,8 +19,8 @@ const App = () => {
           <Route path="projectlist" element={<ProjectList />} />
           <Route path="project" element={<ProjectDashboard />}>
             <Route path="/project/feed/:id" element={<ProjectFeed />} />
-            <Route path="/project/addIssue" element={<AddIssue />} />
-            <Route path="/project/issues" element={<Issue />} />
+            <Route path="/project/addIssue/:id" element={<AddIssue />} />
+            <Route path="/project/issues/:id" element={<Issues />} />
           </Route>
         </Routes>
       </main>
