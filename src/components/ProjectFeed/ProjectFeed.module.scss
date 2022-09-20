@@ -1,8 +1,9 @@
 .container {
   width: 100%;
+  background-color: #f0f0f0;
 }
 .heading {
-  background-color: #FFF;
+  background-color: #fff;
 
   .heading-wrapper {
     display: flex;
@@ -12,7 +13,7 @@
 
   h1 {
     font-size: 1em;
-    margin-left: .75em;
+    margin-left: 0.75em;
   }
 }
 
@@ -20,6 +21,10 @@
   display: flex;
   padding: 0 1.5em;
   margin-top: 1em;
+  gap: 2em;
+  @media only screen and (max-width:600px) {
+    flex-direction: column;
+  }
 }
 
 .feed-content {
@@ -30,14 +35,42 @@
 
 .timeline {
   list-style-type: none;
-  background-color: #FFF;
+  background-color: #fff;
   margin-bottom: 1em;
-  padding: 1em;
   border: 1px solid #c2c2c2;
-  border-radius: 7px;
+  border-radius: 4px;
+
+  h4 {
+    border-bottom-width: 2px;
+    border-radius: 4px 4px 0 0;
+    border-bottom: 1px solid #c2c2c2;
+    padding: 5px 8px;
+    font-size: 0.9rem;
+    line-height: 2rem;
+    font-weight: 600;
+  }
+  .action {
+    padding: 0.5em 0.75em;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  svg {
+    fill: white;
+    background-color: #149bfc;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+  }
+  span {
+   
+    margin-left: 10px;
+  }
 }
 
 .chart {
   flex: 1 1 0;
   background-color: lightcyan;
 }
+
+

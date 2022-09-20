@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "../ProjectFeed/ProjectFeed.module.scss";
-import { ImAddressBook } from "react-icons/im";
-import { FaUserAlt } from "react-icons/fa";
+import { FaUserCircle } from "react-icons/fa";
+import { GiBookshelf } from "react-icons/gi";
 // Feed actions
 // Adding project, adding new issue, adding task to project,
 
@@ -24,16 +24,16 @@ const ProjectFeed = () => {
     <section className={styles.container}>
       <header className={styles.heading}>
         <div className={styles["heading-wrapper"]}>
-          <ImAddressBook size={30} />
+          <GiBookshelf size={35}/>
           <h1>{projectData.title}</h1>
         </div>
       </header>
       <div className={styles["feed-container"]}>
         <ul className={styles["feed-content"]}>
           <li className={styles.timeline}>
-            <h4>Date</h4>
-            <div>
-              <FaUserAlt size={25}/>
+            <h4>Thur Sept 15, 2022</h4>
+            <div className={styles.action}>
+              <FaUserCircle />
               <span>User added a </span>
               <span>ACTION</span>
             </div>
@@ -41,8 +41,8 @@ const ProjectFeed = () => {
 
           <li className={styles.timeline}>
             <h4>Date</h4>
-            <div>
-              <FaUserAlt size={25}/>
+            <div className={styles.action}>
+              <FaUserCircle />
               <span>User added a </span>
               <span>ACTION</span>
             </div>
@@ -50,16 +50,14 @@ const ProjectFeed = () => {
 
           <li className={styles.timeline}>
             <h4>Date</h4>
-            <div>
-              <FaUserAlt size={25}/>
+            <div className={styles.action}>
+              <FaUserCircle />
               <span>User added a </span>
               <span>ACTION</span>
             </div>
           </li>
         </ul>
-        <div className={styles.chart}>
-          Chart
-        </div>
+        <div className={styles.chart}>Chart</div>
       </div>
     </section>
   );
