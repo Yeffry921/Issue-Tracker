@@ -1,0 +1,43 @@
+.container {
+  width: 100%;
+}
+.heading {
+  background-color: #FFF;
+
+  .heading-wrapper {
+    display: flex;
+    align-items: center;
+    padding: 0.45em 1.5em;
+  }
+
+  h1 {
+    font-size: 1em;
+    margin-left: .75em;
+  }
+}
+
+.feed-container {
+  display: flex;
+  padding: 0 1.5em;
+  margin-top: 1em;
+}
+
+.feed-content {
+  flex: 3 1 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.timeline {
+  list-style-type: none;
+  background-color: #FFF;
+  margin-bottom: 1em;
+  padding: 1em;
+  border: 1px solid #c2c2c2;
+  border-radius: 7px;
+}
+
+.chart {
+  flex: 1 1 0;
+  background-color: lightcyan;
+}
