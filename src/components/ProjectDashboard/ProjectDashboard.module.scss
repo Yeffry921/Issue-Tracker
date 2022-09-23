@@ -1,0 +1,10 @@
+.dashboard {
+  display: flex;
+  flex: 1 1 0;
+}
+
+@media only screen and (max-width: 920px) {
+  .dashboard {
+    overflow-x: scroll;
+  }
+}
