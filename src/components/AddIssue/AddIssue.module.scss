@@ -1,0 +1,88 @@
+.container {
+  width: 100%;
+
+  form {
+    width: 95%;
+    margin: 0 auto;
+  }
+}
+.priority {
+  padding: 8px 12px;
+  background-color: #eee;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.priority:focus,
+.priority:hover {
+  outline: none;
+  border: 1px solid #bbb;
+}
+
+.title {
+  margin: 15px 0;
+  label {
+    display: block;
+  }
+  input {
+    padding: 5px 2px;
+    width: 20%;
+    border-radius: 6px;
+    border: 1px solid #c3c3c3;
+  }
+}
+
+.priority-container {
+  margin-top: 20px;
+  label {
+    margin-right: 25px;
+  }
+  .priority {
+    width: 10%;
+  }
+}
+
+.btn {
+  padding: 7px 22px;
+  margin-top: 1.2em;
+  border: none;
+  background-color: #149BFC;
+  border-radius: 5px;
+  color: white;
+  font-size: 1.1rem;
+  width: 20%;
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+// 
+.date {
+  width: 180px;
+  outline: none;
+  border: 1px solid #aaa;
+  padding: 12px;
+  color: #aaa;
+  text-align: center;
+  font-size: large;
+}
+
+.date-container {
+  position: relative;
+
+  .date-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    bottom: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    color: #aaa;
+  }
+  .date-icon:hover {
+    color: #333;
+  }
+}
+
