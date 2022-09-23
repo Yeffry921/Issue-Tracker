@@ -2,11 +2,11 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import Dashboard from "./components/Dashboard/Dashboard";
-import ProjectList from "./components/UI/ProjectList";
+import ProjectList from "./components/ProjectList/ProjectList";
 import ProjectDashboard from "./components/ProjectDashboard/ProjectDashboard";
 import ProjectFeed from "./components/ProjectFeed/ProjectFeed";
-import AddIssue from "./AddIssue";
 import Issues from "./components/Issues/Issues"
+import AddIssue from "./components/AddIssue/AddIssue";
 import "./App.css";
 
 const App = () => {
