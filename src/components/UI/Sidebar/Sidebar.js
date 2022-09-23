@@ -1,31 +1,62 @@
 import React, { useState } from "react";
-import styles from '../Sidebar/Sidebar.module.scss'
+import styles from "../Sidebar/Sidebar.module.scss";
 import { BsArrowLeftShort, BsSearch } from "react-icons/bs";
 import { AiFillEnvironment } from "react-icons/ai";
 import { RiDashboardFill } from "react-icons/ri";
 import { NavLink } from "react-router-dom";
-
-const Sidebar = () => {
+import { GiHamburgerMenu } from "react-icons/gi";
+import { HiArrowLeft } from "react-icons/hi";
+import { MdOutlineAddBox, MdFeaturedPlayList } from "react-icons/md";
+const Sidebar = ({ id }) => {
   const [open, setOpen] = useState(true);
-  
   const menu = [
-    { title: "Dashboard", path: "/", id: 1 },
-    { title: "Projects", path: "/projects", id: 2 },
-    { title: "Issues", path: "/issues", id: 3 },
+    {
+      title: "Home",
+      path: `/project/feed/${id}`,
+      id: 1,
+      icon: <RiDashboardFill />,
+    },
+    {
+      title: "Add Issue",
+      path: `/project/addIssue/${id}`,
+      id: 2,
+      icon: <MdOutlineAddBox />,
+    },
+    {
+      title: "Issues",
+      path: `/project/issues/${id}`,
+      id: 3,
+      icon: <MdFeaturedPlayList />,
+    },
   ];
   return (
     <aside className={`${styles.sidebar} ${open ? "" : styles.collapse}`}>
-      <BsArrowLeftShort
-        className={`${styles["sidebar-arrow"]} ${!open && styles.rotate}`}
-        onClick={() => setOpen((open) => !open)}
-      />
-
       <div
+        className={`${styles["sidebar-arrow-wrapper"]} ${open && styles.open}`}
+      >
+        {/* <BsArrowLeftShort
+          className={`${styles["sidebar-arrow"]} ${!open && styles.rotate}`}
+          onClick={() => setOpen((open) => !open)}
+        /> */}
+        {!open ? (
+          <GiHamburgerMenu
+            className={`${styles["sidebar-arrow"]}`}
+            onClick={() => setOpen((open) => !open)}
+          />
+        ) : (
+          <HiArrowLeft
+            className={`${styles["sidebar-arrow"]}`}
+            onClick={() => setOpen((open) => !open)}
+          />
+        )}
+      </div>
+
+      {/* <div
         className={`${styles["sidebar-icon"]} ${!open ? styles.toggle : ""}`}
       >
         <AiFillEnvironment className={styles.logo} />
         <h1 className={`${!open && styles.hidden}`}>Project</h1>
-      </div>
+      </div> */}
 
       {/* <div className={styles["sidebar-search"]}>
         <BsSearch color="white" style={{ marginRight: open && "4px" }} />
@@ -38,19 +69,20 @@ const Sidebar = () => {
 
       <ul className={styles["sidebar-nav"]}>
         {menu.map((menu, index) => (
-          <NavLink
-            key={menu.id}
-            to={menu.path}
-            className={({ isActive }) => (isActive ? styles.active : "")}
-          >
-            <span className={styles.icon}>
-              <RiDashboardFill />
-            </span>
+          <li key={menu.id}>
+            <NavLink
+              to={menu.path}
+              className={({ isActive }) => (isActive ? styles.active : "")}
+            >
+              <span className={styles.icon}>
+                {menu.icon}
+              </span>
 
-            <span className={`${styles.title} ${!open && styles.hidden}`}>
-              {menu.title}
-            </span>
-          </NavLink>
+              <span className={`${styles.title} ${!open && styles.hidden}`}>
+                {menu.title}
+              </span>
+            </NavLink>
+          </li>
         ))}
       </ul>
     </aside>
