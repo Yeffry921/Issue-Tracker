@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import Modal from "../Modal/Modal";
+import styles from '../ProjectForm/ProjectForm.module.scss'
 
 const ProjectForm = ({ onProjectShown }) => {
   const [value, setValue] = useState("");
@@ -15,7 +16,7 @@ const ProjectForm = ({ onProjectShown }) => {
   };
   return (
     <Modal>
-      <form action="" onSubmit={checkValidation}>
+      <form action="" onSubmit={checkValidation} className={styles.form}>
         <label htmlFor="title">Project Name</label>
         <input
           type="text"
@@ -23,8 +24,8 @@ const ProjectForm = ({ onProjectShown }) => {
           onChange={(e) => setValue(e.target.value)}
         />
 
-        <button type="submit">Add</button>
-        <button onClick={() => onProjectShown(false)}>Cancel</button>
+        <button className={styles.btn} type="submit">Add</button>
+        <button className={styles.btn} onClick={() => onProjectShown(false)}>Cancel</button>
       </form>
     </Modal>
   );
