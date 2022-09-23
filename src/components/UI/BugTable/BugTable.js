@@ -4,7 +4,7 @@ import styles from "../BugTable/BugTable.module.scss"
 const BugTable = () => {
   return (
     <div className={styles.container}>
-      <button>Submit Issue</button>
+      <button className={styles.btn}>Submit Issue</button>
       <table className={styles.table}>
         <thead>
           <tr>
